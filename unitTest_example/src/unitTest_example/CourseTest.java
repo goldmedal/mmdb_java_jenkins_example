@@ -23,17 +23,21 @@ public class CourseTest {
 	@Before
 	public void setUp() throws Exception {
 		System.out.println("c");
-		Course test_case = new Course();
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		System.out.println("d");
+
+		
 	}
 
 	@Test
 	public void test() {
-		System.out.println("e");
+		Course test = new Course();
+		int[] par = {2, 2};
+		test.setPar(par);
+		int leng = test.getNumberOfHoles();
+		assertEquals(2, leng);
 	}
 
 }
